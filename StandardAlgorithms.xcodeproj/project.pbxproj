@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C90AB8323718CCD00A1AB4D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C90AB8223718CCD00A1AB4D /* main.swift */; };
+		8C90AB902371923500A1AB4D /* StandardAlgorithmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C90AB8F2371923500A1AB4D /* StandardAlgorithmsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +26,20 @@
 /* Begin PBXFileReference section */
 		8C90AB7F23718CCD00A1AB4D /* StandardAlgorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StandardAlgorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C90AB8223718CCD00A1AB4D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8C90AB8D2371923500A1AB4D /* StandardAlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StandardAlgorithmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C90AB8F2371923500A1AB4D /* StandardAlgorithmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAlgorithmsTests.swift; sourceTree = "<group>"; };
+		8C90AB912371923500A1AB4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8C90AB7C23718CCD00A1AB4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C90AB8A2371923500A1AB4D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				8C90AB8123718CCD00A1AB4D /* StandardAlgorithms */,
+				8C90AB8E2371923500A1AB4D /* StandardAlgorithmsTests */,
 				8C90AB8023718CCD00A1AB4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				8C90AB7F23718CCD00A1AB4D /* StandardAlgorithms */,
+				8C90AB8D2371923500A1AB4D /* StandardAlgorithmsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +73,15 @@
 				8C90AB8223718CCD00A1AB4D /* main.swift */,
 			);
 			path = StandardAlgorithms;
+			sourceTree = "<group>";
+		};
+		8C90AB8E2371923500A1AB4D /* StandardAlgorithmsTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C90AB8F2371923500A1AB4D /* StandardAlgorithmsTests.swift */,
+				8C90AB912371923500A1AB4D /* Info.plist */,
+			);
+			path = StandardAlgorithmsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +104,23 @@
 			productReference = 8C90AB7F23718CCD00A1AB4D /* StandardAlgorithms */;
 			productType = "com.apple.product-type.tool";
 		};
+		8C90AB8C2371923500A1AB4D /* StandardAlgorithmsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C90AB922371923500A1AB4D /* Build configuration list for PBXNativeTarget "StandardAlgorithmsTests" */;
+			buildPhases = (
+				8C90AB892371923500A1AB4D /* Sources */,
+				8C90AB8A2371923500A1AB4D /* Frameworks */,
+				8C90AB8B2371923500A1AB4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StandardAlgorithmsTests;
+			productName = StandardAlgorithmsTests;
+			productReference = 8C90AB8D2371923500A1AB4D /* StandardAlgorithmsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +132,9 @@
 				ORGANIZATIONNAME = "Kochhar, Anish (EJNR)";
 				TargetAttributes = {
 					8C90AB7E23718CCD00A1AB4D = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					8C90AB8C2371923500A1AB4D = {
 						CreatedOnToolsVersion = 11.2;
 					};
 				};
@@ -111,9 +153,20 @@
 			projectRoot = "";
 			targets = (
 				8C90AB7E23718CCD00A1AB4D /* StandardAlgorithms */,
+				8C90AB8C2371923500A1AB4D /* StandardAlgorithmsTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C90AB8B2371923500A1AB4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C90AB7B23718CCD00A1AB4D /* Sources */ = {
@@ -121,6 +174,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C90AB8323718CCD00A1AB4D /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C90AB892371923500A1AB4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C90AB902371923500A1AB4D /* StandardAlgorithmsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +319,40 @@
 			};
 			name = Release;
 		};
+		8C90AB932371923500A1AB4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = StandardAlgorithmsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anishkochhar16.StandardAlgorithmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8C90AB942371923500A1AB4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = StandardAlgorithmsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anishkochhar16.StandardAlgorithmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -275,6 +370,15 @@
 			buildConfigurations = (
 				8C90AB8723718CCD00A1AB4D /* Debug */,
 				8C90AB8823718CCD00A1AB4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C90AB922371923500A1AB4D /* Build configuration list for PBXNativeTarget "StandardAlgorithmsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C90AB932371923500A1AB4D /* Debug */,
+				8C90AB942371923500A1AB4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
