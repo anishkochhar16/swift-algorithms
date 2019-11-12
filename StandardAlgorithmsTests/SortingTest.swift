@@ -10,12 +10,24 @@ import XCTest
 
 class SortingTest: XCTestCase {
 
+    let n = 20
+
     func testBubbleSortWithMultipleIntegerArraysReturnsSortedIntegerArrays () {
         //arrange
         let sorting = Sorting()
-        let testCases = [(input: [10, 3, 2, 7, 1], expected: [1, 2, 3, 7, 10]),
-                         (input: [400, 231, 64, 123, 57, 579, 342, 234, 12], expected: [12, 57, 64, 123, 231, 234, 342, 400, 579]),
-                         (input: [1], expected: [1])]
+        var testCases = [(input: [Int](), expected: [Int]())]
+        
+        for _ in 0...5 {
+            var newTuple = (input: [Int](), expected: [Int]())
+            
+            for _ in 1...n {
+                newTuple.input.append(Int.random(in: 1...50))
+            }
+            newTuple.expected = newTuple.input.sorted()
+            
+            testCases.append(newTuple)
+        }
+        testCases.removeFirst()
         
         //act
         //assert
@@ -27,24 +39,22 @@ class SortingTest: XCTestCase {
     
     }
     
-   /* func testMergeReturnsMergedArraysFromTwoIntergerArrays () {
+    func testMergeSortWithIntegerArrayReturnsSortedArray () {
         //arrange
         let sorting = Sorting()
-        let testCases = [(inputOne: [1, 7, 8], inputTwo: [2, 6, 12], expected: [1, 2, 6, 7, 8, 12]),
-                         (inputOne: [2, 4, 14, 16, 46], inputTwo: [5, 67, 80, 903, 1000], expected: [2, 4, 5, 14, 16, 46, 67, 80, 903, 1000])]
+        var testCases = [(input: [Int](), expected: [Int]())]
         
-        //act
-        //assert
-        for testCase in testCases {
-            let actual = sorting.merge(leftArray: testCase.inputOne , rightArray: testCase.inputTwo)
-            XCTAssertEqual(actual, testCase.expected)
+        for _ in 0...5 {
+            var newTuple = (input: [Int](), expected: [Int]())
+            
+            for _ in 1...n {
+                newTuple.input.append(Int.random(in: 1...50))
+            }
+            newTuple.expected = newTuple.input.sorted()
+            
+            testCases.append(newTuple)
         }
-    } */
-    
-    func testMergeSortWithArrayReturnsSortedArray () {
-        //arrange
-        let sorting = Sorting()
-        let testCases = [(input: [8,24,14,6,2,7,89,23,12,4], expected: [2, 4, 6, 7, 8, 12, 14, 23, 24, 89])]
+        testCases.removeFirst()
         
         //act
         //assert
@@ -54,12 +64,108 @@ class SortingTest: XCTestCase {
         }
     }
     
-    func testBubbleSortPerformance() {
-        let data = [456, 23, 12, 54, 13, 5, 132]
+    
+    func testQuickSortWithIntegerArrayReturnsSortedArray () {
+        //arrange
+        let sorting = Sorting()
+        
+        var testCases = [(input: [Int](), expected: [Int]())]
+        
+        for _ in 0...5 {
+            var newTuple = (input: [Int](), expected: [Int]())
+            
+            for _ in 1...n {
+                newTuple.input.append(Int.random(in: 1...50))
+            }
+            newTuple.expected = newTuple.input.sorted()
+            
+            testCases.append(newTuple)
+        }
+        testCases.removeFirst()
+        
+
+        //act
+        //assert
+        for testCase in testCases {
+            let actual = sorting.quickSort(array: testCase.input)
+            XCTAssertEqual(actual, testCase.expected)
+        }
+    }
+    
+    func testInsertionSortReturnsSortedIntergerArray () {
+        //arrange
+        let sorting = Sorting()
+        var testCases = [(input: [Int](), expected: [Int]())]
+        
+        for _ in 0...5 {
+            var newTuple = (input: [Int](), expected: [Int]())
+            
+            for _ in 1...n {
+                newTuple.input.append(Int.random(in: 1...50))
+            }
+            newTuple.expected = newTuple.input.sorted()
+            
+            testCases.append(newTuple)
+        }
+        testCases.removeFirst()
+        
+        //act
+        //assert
+        for testCase in testCases {
+            let actual = sorting.insertionSort(array: testCase.input)
+            XCTAssertEqual(actual, testCase.expected)
+        }
+    }
+
+    
+    func testSortingPerformance() {
+        let n = 20 // Number of elements in test array
+        var data  = [Int] ()
+        for _ in 0...n {
+            data.append(Int.random(in: 1...50))
+        }
         let sorting = Sorting()
         
         measure {
             sorting.bubbleSort(data: data)
         }
+    
     }
+    func testMergeSortPerformance () {
+        let n = 20 // Number of elements in test array
+        var data  = [Int] ()
+        for _ in 0...n {
+            data.append(Int.random(in: 1...50))
+        }
+        let sorting = Sorting()
+        measure {
+            sorting.mergeSort(array: data)
+        }
+    }
+    func testQuickSortPerformance () {
+        let n = 20 // Number of elements in test array
+        var data  = [Int] ()
+        for _ in 0...n {
+            data.append(Int.random(in: 1...50))
+        }
+        let sorting = Sorting()
+        
+        measure {
+            sorting.quickSort(array: data)
+        }
+    }
+    func testInsertionSortPerformance () {
+        let n = 20 // Number of elements in test array
+        var data  = [Int] ()
+        for _ in 0...n {
+            data.append(Int.random(in: 1...50))
+        }
+        let sorting = Sorting()
+        
+        measure {
+            sorting.insertionSort(array: data)
+        }
+    }
+
+
 }
