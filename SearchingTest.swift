@@ -76,7 +76,7 @@ class SearchingTest: XCTestCase {
         let searching = Searching()
         
         measure {
-            searching.binarySearch(array: data, target: Int.random(in: 1...50))
+            let _ = searching.binarySearch(array: data, target: Int.random(in: 1...50))
         }
     }
     func testLinearSearchPerformance () {
@@ -88,7 +88,7 @@ class SearchingTest: XCTestCase {
         let searching = Searching()
         
         measure {
-            searching.linearSearch(array: data, target: Int.random(in: 1...50))
+            let _ = searching.linearSearch(array: data, target: Int.random(in: 1...50))
         }
     }
 }

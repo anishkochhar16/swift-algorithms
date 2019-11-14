@@ -127,7 +127,7 @@ class SortingTest: XCTestCase {
         let sorting = Sorting()
         
         measure {
-            sorting.bubbleSort(data: data)
+            let _ = sorting.bubbleSort(data: data)
         }
     
     }
@@ -139,7 +139,7 @@ class SortingTest: XCTestCase {
         }
         let sorting = Sorting()
         measure {
-            sorting.mergeSort(array: data)
+            let _ = sorting.mergeSort(array: data)
         }
     }
     func testQuickSortPerformance () {
@@ -151,7 +151,7 @@ class SortingTest: XCTestCase {
         let sorting = Sorting()
         
         measure {
-            sorting.quickSort(array: data)
+            let _ = sorting.quickSort(array: data)
         }
     }
     func testInsertionSortPerformance () {
@@ -163,7 +163,7 @@ class SortingTest: XCTestCase {
         let sorting = Sorting()
         
         measure {
-            sorting.insertionSort(array: data)
+            let _ = sorting.insertionSort(array: data)
         }
     }
 
