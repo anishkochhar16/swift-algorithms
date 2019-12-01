@@ -72,12 +72,23 @@ class Unknown {
     
     func problemFive (url: String) -> String? {
         
-        var url = URL(string: url)
-        var domain = url?.host
+        let domainRegEx = "(?<=.com|.au|.co.uk|.net|.org)"
         
-        // Spent 40 minutes and couldnt figure it out
-        return domain
+        do {
+            let regex = try NSRegularExpression(pattern: domainRegEx)
+            let nsString = url as NSString
+            let results = regex.matches(in: url, range: NSRange(location: 0, length: nsString.length))
+            print("Found:",results)
+            return "hi"
+            
+            }
+        catch let error as NSError {
+            let error = "Invalid RegEx"
+            return error
+        }
     }
+    
+    // Could not work out how to use RegEx in XCode
     
 }
 

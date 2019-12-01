@@ -57,7 +57,8 @@ class UnknownTest: XCTestCase {
     func testProblemFiveReturnsDomainNameFromURL () {
         let unknown = Unknown()
         
-        let testCases = [("http://www.example.com", "example"), ("https://www.example.com/actor/angle?base=brass&afternoon=boat", "example"), ("https://www.whatsmyip.org/random-website-machine", "whatsmyip")]
+        let testCases = [("http://www.example.com", "example"), ("https://www.example.com/actor/angle?base=brass&afternoon=boat", "example"), ("https://www.whatsmyip.org/random-website-machine", "whatsmyip"),
+            ("blah", "InvalidRegEx")]
         
         for testCase in testCases {
             let actualDomain = unknown.problemFive(url :testCase.0)
